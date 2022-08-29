@@ -1,0 +1,11 @@
+models/Docente_.java
+models/Usuario_.java
+models/Revista_.java
+models/Biblioteca_.java
+models/LineaPrestamo_.java
+models/Cuenta_.java
+models/Prestamo_.java
+models/MaterialBibliografico_.java
+models/Libro_.java
+models/Tesis_.java
+models/Estudiante_.java
