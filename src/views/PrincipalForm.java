@@ -10,7 +10,6 @@ import java.awt.Cursor;
 import java.time.LocalDate;
 import static java.time.LocalDate.now;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
@@ -29,10 +28,7 @@ import services.MaterialBibliograficoService;
 import services.PrestamoService;
 import services.UsuarioService;
 
-/**
- *
- * @author tellxmaster
- */
+
 public class PrincipalForm extends javax.swing.JFrame {
 
     private Usuario usuario = new Docente("John", "Doe","1753699808","Oklahoma","john@doe.com","0995794711","Ingeniero","Ciencias Exactas");
@@ -332,7 +328,6 @@ public class PrincipalForm extends javax.swing.JFrame {
         lblPrestamo.setFont(new java.awt.Font("Montserrat Medium", 0, 14)); // NOI18N
         lblPrestamo.setForeground(new java.awt.Color(51, 51, 51));
         lblPrestamo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblPrestamo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/prestamo-icon.png"))); // NOI18N
         lblPrestamo.setText("REALIZAR PRESTAMO");
         lblPrestamo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -352,7 +347,6 @@ public class PrincipalForm extends javax.swing.JFrame {
         lblAgregarLibros.setFont(new java.awt.Font("Montserrat Medium", 0, 14)); // NOI18N
         lblAgregarLibros.setForeground(new java.awt.Color(51, 51, 51));
         lblAgregarLibros.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAgregarLibros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/agregar-icon.png"))); // NOI18N
         lblAgregarLibros.setText("AGREGAR LIBROS");
         lblAgregarLibros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -384,7 +378,6 @@ public class PrincipalForm extends javax.swing.JFrame {
         lblInicio.setFont(new java.awt.Font("Montserrat Medium", 0, 14)); // NOI18N
         lblInicio.setForeground(new java.awt.Color(51, 51, 51));
         lblInicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home-icon.png"))); // NOI18N
         lblInicio.setText("INICIO");
         lblInicio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -479,7 +472,7 @@ public class PrincipalForm extends javax.swing.JFrame {
         Cover.setBackground(new java.awt.Color(34, 40, 49));
         Cover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cover.png"))); // NOI18N
         Cover.setOpaque(true);
-        BackgroundPanel.add(Cover, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 740, 20));
+        BackgroundPanel.add(Cover, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 740, 30));
 
         PrincipalPanel.setOpaque(false);
 
@@ -584,12 +577,6 @@ public class PrincipalForm extends javax.swing.JFrame {
         });
         RegMatBiblioForm.add(cboMaterial, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 57, 190, 40));
         RegMatBiblioForm.add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, 190, 40));
-
-        txtAutor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAutorActionPerformed(evt);
-            }
-        });
         RegMatBiblioForm.add(txtAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 146, 190, 40));
         RegMatBiblioForm.add(txtEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 190, 40));
 
@@ -646,19 +633,7 @@ public class PrincipalForm extends javax.swing.JFrame {
             }
         });
         libroFields.add(btnGuardarLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 216, 43));
-
-        txtISBN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtISBNActionPerformed(evt);
-            }
-        });
         libroFields.add(txtISBN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 190, 40));
-
-        txtDescripcion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDescripcionActionPerformed(evt);
-            }
-        });
         libroFields.add(txtDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 190, 40));
 
         FieldLayer.add(libroFields, "card3");
@@ -687,12 +662,6 @@ public class PrincipalForm extends javax.swing.JFrame {
             }
         });
         revistaFields.add(btnGuardarRevista, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 216, 43));
-
-        txtNumArticulos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNumArticulosActionPerformed(evt);
-            }
-        });
         revistaFields.add(txtNumArticulos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 190, 40));
 
         FieldLayer.add(revistaFields, "card2");
@@ -727,19 +696,7 @@ public class PrincipalForm extends javax.swing.JFrame {
             }
         });
         tesisFIelds.add(btnGuardarTesis, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 216, 43));
-
-        txtTutor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTutorActionPerformed(evt);
-            }
-        });
         tesisFIelds.add(txtTutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 190, 40));
-
-        txtUniversidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUniversidadActionPerformed(evt);
-            }
-        });
         tesisFIelds.add(txtUniversidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 190, 40));
 
         FieldLayer.add(tesisFIelds, "card4");
@@ -1019,33 +976,15 @@ public class PrincipalForm extends javax.swing.JFrame {
         //this.repaint();
     }//GEN-LAST:event_cboMaterialcboMaterialItemStateChanged
 
-    private void txtAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAutorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAutorActionPerformed
-
-    private void txtTutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTutorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTutorActionPerformed
-
-    private void txtUniversidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUniversidadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUniversidadActionPerformed
-
-    private void txtNumArticulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumArticulosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNumArticulosActionPerformed
-
-    private void txtISBNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtISBNActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtISBNActionPerformed
-
-    private void txtDescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescripcionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDescripcionActionPerformed
-
     private void lblPrestamoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPrestamoMouseClicked
         FormsPanel.setSelectedIndex(2);
         
+        DefaultComboBoxModel materialModel =  new DefaultComboBoxModel();
+        materialModel.addElement("-- Seleccione un documento --");
+        for(MaterialBibliografico documento : materialService.listar()){
+           materialModel.addElement(documento.getTitulo());
+        }
+        cboMatB.setModel(materialModel);
     }//GEN-LAST:event_lblPrestamoMouseClicked
 
     private void lblAgregarLibrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAgregarLibrosMouseClicked
@@ -1129,19 +1068,27 @@ public class PrincipalForm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAddLIbroActionPerformed
 
     private void btnIngresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresar1ActionPerformed
-        LocalDate fechaPrestamo = now();
-        LocalDate fechaEntrega = LocalDate.parse(txtFechaEnt.getText());
-        Biblioteca biblioteca = bibliotecaService.recuperarBibliotecaByNombre(cboBibliotecas.getSelectedItem().toString());
-        Prestamo prestamo = new Prestamo(fechaPrestamo,fechaEntrega,biblioteca,usuarioService.recuperarUsuarioById(this.usuario.getId()));
-        prestamo.toString();
+        try{
+            LocalDate fechaPrestamo = now();
+            LocalDate fechaEntrega = LocalDate.parse(txtFechaEnt.getText());
+            Biblioteca biblioteca = bibliotecaService.recuperarBibliotecaByNombre(cboBibliotecas.getSelectedItem().toString());
+            Prestamo prestamo = new Prestamo(fechaPrestamo,fechaEntrega,biblioteca,usuarioService.recuperarUsuarioById(this.usuario.getId()));
+            prestamo.toString();
+
+            List<LineaPrestamo> lineas = PrincipalForm.lprestamos;
+            for (LineaPrestamo lprest : lineas) {
+                lprest.setPrestamo(prestamo);
+                prestamo.addLineaPrestamo(lprest);
+                System.out.println(lprest.toString());
+            }
+            prestamoService.guardar(prestamo);
+            successMessage.setText("Prestamo Realizado Correctamente");
+            SuccessMessage.setVisible(true);
         
-        List<LineaPrestamo> lineas = this.lprestamos;
-        for (LineaPrestamo lprest : lineas) {
-            lprest.setPrestamo(prestamo);
-            prestamo.addLineaPrestamo(lprest);
-            System.out.println(lprest.toString());
+        }catch(Exception error){
+            errorMessage.setText("Ha ocurrido un error");
+            ErrorMessage.setVisible(true);
         }
-        prestamoService.guardar(prestamo);
 
         prestamoService.imprimir(prestamoService.listar());
     }//GEN-LAST:event_btnIngresar1ActionPerformed
@@ -1275,6 +1222,13 @@ public class PrincipalForm extends javax.swing.JFrame {
     private util.RoundJTextField txtUniversidad;
     // End of variables declaration//GEN-END:variables
     private void cargarEstilos(){
+        if(this.tipo.equals("Estudiante")){
+            lblAgregarLibros.setVisible(false);
+            lblAgregarLibros.setEnabled(false);
+        }
+        this.FormsPanel.setEnabledAt(0, false);
+        this.FormsPanel.setEnabledAt(1, false);
+        this.FormsPanel.setEnabledAt(2, false);
         txtFechaPr.setText(""+now());
         txtFechaPr.setEditable(false);
         ErrorMessage.setLocationRelativeTo(null);
