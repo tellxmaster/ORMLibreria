@@ -472,7 +472,7 @@ public class PrincipalForm extends javax.swing.JFrame {
         Cover.setBackground(new java.awt.Color(34, 40, 49));
         Cover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cover.png"))); // NOI18N
         Cover.setOpaque(true);
-        BackgroundPanel.add(Cover, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 740, 30));
+        BackgroundPanel.add(Cover, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 740, 0));
 
         PrincipalPanel.setOpaque(false);
 

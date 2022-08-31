@@ -366,7 +366,6 @@ public class AuthForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
-        setMaximumSize(new java.awt.Dimension(720, 520));
         setMinimumSize(new java.awt.Dimension(720, 520));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
